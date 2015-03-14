@@ -11,7 +11,7 @@ html
 
     article
 
-      section
+      section(data-bespoke-backdrop="crane").transwhite
         a(href="http://nearform.com" style="width: 200px")
           img(src="./images/nearform.svg")
         h1 Live Deployment with Docker and nScale
@@ -19,12 +19,69 @@ html
           a(href="http://twitter.com/matteocollina") Matteo Collina
 
       section
-        h1 Build
+        img(src='images/docker.png' style="height: 100%")
+
+      section
+        img(src='images/docker-small.png' style="width: 50%")
+        ul
+          li Immutable containers based on images
+          li Simple build process for images
+          li Registry with common images
+          li
+            code docker build .
+          li
+            code docker run
+
+      section
+        h2 Dockerfile
+        h3 for a simple node.js app
+
+        pre
+          code.language-javascript.
+            FROM node:0.10-onbuild
+
+      section
+        h2 Our simple app
+        ul
+          li HTTP Key/Value store
+          li Built on Redis
+          li
+            code POST /my/key
+          li
+            code GET /my/key
+
+      section(data-bespoke-backdrop="code-time").trans
+        h1(style="color: white") Code Time
+
+      section
+        img(src='images/nscale.png' style="width: 100%")
+
+      section(data-bespoke-backdrop="code-time").trans
+        h1(style="color: white") Code Time
+
+      section
+        img(src='images/nscale.png' style="width: 100%")
+
+      section
+        h2
+          a(href="http://nscale.nearform.com") nscale.nearform.com
+
+      section
+        h2 Build
         img(src='images/build.png' style="width: 80%")
 
       section
-        h1 Deployment
+        h2 Deployment
         img(src='images/deployment.png' style="width: 80%")
+
+      section
+        h2 Coming soon
+
+        ul
+          li simpler configuration
+          li AWS Autoscaling Group support
+          li Azure support
+          li ...
 
       section.full-imgs
         img(src='images/me.png')
