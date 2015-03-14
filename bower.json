@@ -1,0 +1,8 @@
+{
+  "name": "presentation-live-deployment-with-docker-and-nscale",
+  "version": "0.0.0",
+  "dependencies": {
+    "prism": "gh-pages",
+    "font-awesome": "~4.3.0"
+  }
+}
